@@ -6,7 +6,7 @@
     {
       "route": "/ios/1.132.11/fileinfo",
       "size": 8153,
-      "sha256": "98adc207c9df82ec57be2bdad152ca6869a67266624952390a1c9abd16d6fde8",
+      "sha256": "b32fad027d4a9d56c9bf8c45116958efe3741f30e892ffcdaa8daba328d3e78c",
       "contentType": "text/plain; charset=utf-8"
     },
     {
@@ -262,9 +262,9 @@
       "contentType": "application/octet-stream"
     },
     {
-      "route": "/ios/1.132.11/gameassetbundles/codepatch/assembly-csharp-patch.qbmcbI~2FOg4VFOl~2BxosSyjwJa5Ig~3D",
-      "size": 32384,
-      "sha256": "50bdb420047daf3499eab4002f7af8ae6755bb2612d812e87fabda0a03abcc96",
+      "route": "/ios/1.132.11/gameassetbundles/codepatch/assembly-csharp-patch.omSP2iQK7Mem7nWT7ZE05~2BILKss~3D",
+      "size": 32374,
+      "sha256": "cacc76699b4a2c0464d0cb99af578eca4fd0aa313c853232ed4d05a9d727bdab",
       "contentType": "application/octet-stream"
     },
     {
@@ -437,5 +437,6 @@
     }
   ],
   "version": 2,
-  "description": "Three-tab menu and disabled authentication helper entries; static verification only"
+  "description": "v2 behavior unchanged; display title renamed",
+  "title": "HDOAN & TT1403"
 }

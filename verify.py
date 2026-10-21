@@ -29,9 +29,32 @@ for row in rows:
         changes_file = root / 'v2-changes.json'
         if changes_file.exists():
             changes = json.loads(changes_file.read_text())
-            # Same payload bounds as v1, since no instruction/string sizes changed.
-            payload = raw[2768:2768 + 168020]
-            assert hashlib.sha256(payload).hexdigest() == changes['payload_sha256']
+            title_file = root / 'title-changes.json'
+            title = json.loads(title_file.read_text()) if title_file.exists() else None
+            offset = title['payload_offset'] if title else 2768
+            size = title['payload_size'] if title else 168020
+            payload = raw[offset:offset + size]
+            assert hashlib.sha256(payload).hexdigest() == (title or changes)['payload_sha256']
+            if title:
+                assert title['source_v2_sha256'] == changes['payload_sha256']
+                table = payload[title['string_table_offset']:title['string_table_offset'] + title['string_table_size']]
+                count = struct.unpack_from('<i', table)[0]
+                pos = 4
+                strings = []
+                for _ in range(count):
+                    length = shift = 0
+                    while True:
+                        byte = table[pos]; pos += 1
+                        length |= (byte & 127) << shift
+                        if byte < 128:
+                            break
+                        shift += 7
+                    strings.append(table[pos:pos + length].decode('utf-8'))
+                    pos += length
+                assert pos == len(table) and count == 142
+                assert strings[67] == strings[69] == title['title'] == 'HDOAN & TT1403'
+                node = raw[title['node_offset']:]
+                assert len(node) == title['node_size'] == struct.unpack_from('>Q', node, 24)[0]
             for edit in changes['edits']:
                 assert list(struct.unpack_from('<ii', payload, edit['offset'])) == edit['after']
             assert len(changes['edits']) == 14

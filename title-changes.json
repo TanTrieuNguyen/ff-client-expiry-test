@@ -1,0 +1,20 @@
+{
+  "title": "HDOAN & TT1403",
+  "payload_offset": 2800,
+  "payload_size": 168038,
+  "payload_sha256": "5b2a25d09d9bd3ce31c218fb7cfef6daebe3d6b1dcf3be786454dd7a20759001",
+  "source_v2_sha256": "d7cd5e47576212380a1f7350f557de378581e68702ef6b7154b1f9a72df5d231",
+  "changed_string_ids": [
+    67,
+    69
+  ],
+  "instructions_unchanged": true,
+  "string_table_offset": 164984,
+  "string_table_size": 1879,
+  "node_offset": 160,
+  "node_size": 170896,
+  "textasset_size": 168072,
+  "second_object_offset": 170680,
+  "patch_filename": "assembly-csharp-patch.omSP2iQK7Mem7nWT7ZE05~2BILKss~3D",
+  "runtimeTested": false
+}

@@ -1,4 +1,10 @@
-# Experimental menu/offline patch mirror — v2
+# HDOAN & TT1403 — experimental menu mirror
+
+Display titles now read **HDOAN & TT1403**. Only display-string entries 67 and 69
+were renamed; every IFix instruction remains identical to v2. Container lengths,
+object offsets, GZIP and manifest hashes were rebuilt. `title-changes.json`
+records the payload bounds and hashes. Use `proxypin-rollback-v2.json` to restore
+the pre-rename v2 build. This rename has not been visually tested on an iPhone.
 
 **Experimental: not tested in the game, not a verified full unlock.**
 

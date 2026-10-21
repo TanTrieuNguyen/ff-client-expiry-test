@@ -1,0 +1,8 @@
+[
+  {
+    "enabled": true,
+    "name": "Menu offline v2 EXPERIMENT - runtime untested",
+    "url": ".*",
+    "script": "function onRequest(a,b){return b;}function onResponse(a,b,c){try{if(b.path&&b.path.indexOf(\"/live\")===0&&typeof c.body===\"string\"){var o=JSON.parse(c.body);if(o&&typeof o===\"object\"&&!Array.isArray(o)&&Object.prototype.hasOwnProperty.call(o,\"abhotupdate_cdn_url\")){o.abhotupdate_cdn_url=\"https://raw.githubusercontent.com/TanTrieuNguyen/ff-client-expiry-test/ed42b48449625f87c45975873a93630f57579dfe/raw/\";c.body=JSON.stringify(o);}}}catch(e){}return c;}"
+  }
+]
