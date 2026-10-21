@@ -6,7 +6,7 @@
     {
       "route": "/ios/1.132.11/fileinfo",
       "size": 8153,
-      "sha256": "88d151916824aef0ccfa683d4968357f2cbb4cd5f07fca186348c0d62a49254c",
+      "sha256": "98adc207c9df82ec57be2bdad152ca6869a67266624952390a1c9abd16d6fde8",
       "contentType": "text/plain; charset=utf-8"
     },
     {
@@ -262,9 +262,9 @@
       "contentType": "application/octet-stream"
     },
     {
-      "route": "/ios/1.132.11/gameassetbundles/codepatch/assembly-csharp-patch.clg3DaC95lqdV5BUdCtPSfKDKvE~3D",
-      "size": 32402,
-      "sha256": "0901a84662939e48e0913296f464957ad50785fc27995f0e0f4a070209f0a5db",
+      "route": "/ios/1.132.11/gameassetbundles/codepatch/assembly-csharp-patch.qbmcbI~2FOg4VFOl~2BxosSyjwJa5Ig~3D",
+      "size": 32384,
+      "sha256": "50bdb420047daf3499eab4002f7af8ae6755bb2612d812e87fabda0a03abcc96",
       "contentType": "application/octet-stream"
     },
     {
@@ -435,5 +435,7 @@
       "sha256": "d1b319ff86b399d4d750047aa1fad5f207d461daedfe4224ef26964c058d6e80",
       "contentType": "application/octet-stream"
     }
-  ]
+  ],
+  "version": 2,
+  "description": "Three-tab menu and disabled authentication helper entries; static verification only"
 }

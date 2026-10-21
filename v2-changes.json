@@ -1,0 +1,220 @@
+{
+  "version": 2,
+  "runtimeTested": false,
+  "previous_payload_sha256": "49408d5e36ccb8201dd90765e686297f85430cab630e2150564ff0e419ed3a28",
+  "payload_sha256": "d7cd5e47576212380a1f7350f557de378581e68702ef6b7154b1f9a72df5d231",
+  "edits": [
+    {
+      "method": 6,
+      "instruction": 1,
+      "offset": 141001,
+      "before": [
+        144,
+        -5
+      ],
+      "after": [
+        136,
+        0
+      ],
+      "reason": "Disable response polling at entry"
+    },
+    {
+      "method": 17,
+      "instruction": 1,
+      "offset": 150345,
+      "before": [
+        95,
+        1
+      ],
+      "after": [
+        136,
+        0
+      ],
+      "reason": "Disable license state writes at entry"
+    },
+    {
+      "method": 19,
+      "instruction": 1,
+      "offset": 152169,
+      "before": [
+        95,
+        9
+      ],
+      "after": [
+        136,
+        0
+      ],
+      "reason": "Disable key request sender at entry"
+    },
+    {
+      "method": 26,
+      "instruction": 1,
+      "offset": 158337,
+      "before": [
+        95,
+        6
+      ],
+      "after": [
+        136,
+        0
+      ],
+      "reason": "Disable device request sender at entry"
+    },
+    {
+      "method": 5,
+      "instruction": 1549,
+      "offset": 46809,
+      "before": [
+        151,
+        6
+      ],
+      "after": [
+        42,
+        48
+      ],
+      "reason": "Skip authentication scheduler; preserve exception layout"
+    },
+    {
+      "method": 5,
+      "instruction": 1715,
+      "offset": 48137,
+      "before": [
+        180,
+        3
+      ],
+      "after": [
+        180,
+        2
+      ],
+      "reason": "Maximum selected tab is MISC"
+    },
+    {
+      "method": 5,
+      "instruction": 1720,
+      "offset": 48177,
+      "before": [
+        180,
+        3
+      ],
+      "after": [
+        180,
+        2
+      ],
+      "reason": "Clamp persisted KEY selection to MISC"
+    },
+    {
+      "method": 5,
+      "instruction": 1735,
+      "offset": 48297,
+      "before": [
+        20,
+        31
+      ],
+      "after": [
+        42,
+        34
+      ],
+      "reason": "Skip forced KEY selection and key hint persistence"
+    },
+    {
+      "method": 5,
+      "instruction": 3225,
+      "offset": 60217,
+      "before": [
+        3,
+        1082130432
+      ],
+      "after": [
+        3,
+        1077936128
+      ],
+      "reason": "Divide tab width by three"
+    },
+    {
+      "method": 5,
+      "instruction": 3354,
+      "offset": 61249,
+      "before": [
+        180,
+        4
+      ],
+      "after": [
+        180,
+        3
+      ],
+      "reason": "Render and hit-test only ESP/AIM/MISC"
+    },
+    {
+      "method": 5,
+      "instruction": 6334,
+      "offset": 85089,
+      "before": [
+        62,
+        939
+      ],
+      "after": [
+        62,
+        1641
+      ],
+      "reason": "Skip KEY content on fallback tab branch"
+    },
+    {
+      "method": 5,
+      "instruction": 7273,
+      "offset": 92601,
+      "before": [
+        151,
+        22
+      ],
+      "after": [
+        42,
+        702
+      ],
+      "reason": "Guard legacy KEY content entry"
+    },
+    {
+      "method": 5,
+      "instruction": 3179,
+      "offset": 59849,
+      "before": [
+        16,
+        68
+      ],
+      "after": [
+        16,
+        69
+      ],
+      "reason": "Replace unactivated header fallback with product name"
+    },
+    {
+      "method": 5,
+      "instruction": 8712,
+      "offset": 104113,
+      "before": [
+        16,
+        137
+      ],
+      "after": [
+        16,
+        3
+      ],
+      "reason": "Remove obsolete activation warning text"
+    }
+  ],
+  "network_constructor_sites": [
+    [
+      19,
+      201
+    ],
+    [
+      26,
+      157
+    ]
+  ],
+  "limitations": [
+    "Opcode semantics inferred; static checks only",
+    "Authentication code and strings remain as unreachable bytes, not physically removed",
+    "No claim about other patches or game networking",
+    "Fresh game process required; persisted key data is not deleted"
+  ]
+}
